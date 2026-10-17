@@ -18,6 +18,14 @@ BBC News Archive (`bbc_news_data.csv`, tab-separated): 2,225 articles with `cate
 5. Evaluate on the test set: accuracy, precision, recall, F1, confusion matrix
 6. Predict the category of new articles with an inference function
 
+## Results
+| Model | Test accuracy |
+|---|---|
+| TensorFlow (Small BERT, fully fine-tuned) | 95.5% |
+| Hugging Face (`bert-base-uncased`, frozen encoder) | 63.6% |
+
+Sport was the easiest category to classify and business the hardest. The Hugging Face model trains only the classification head, which explains its lower accuracy.
+
 ## Setup
 Run in Google Colab with a GPU (Runtime > Change runtime type > T4 GPU).
 
